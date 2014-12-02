@@ -1,0 +1,219 @@
+html,body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+  font-family:"Open Sans";
+}
+
+.container{
+  width:100%;
+  height:100%;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+.topSectionContainer{
+  width:100%;
+  height:100%;
+  background:#007ee5;
+  position:relative;
+
+}
+
+.topSection{
+  width:100%;
+  height:100%;
+  background:url(../assets/dropbox-for-business-files.png) no-repeat center center;
+  background-size:cover;
+  position:absolute;
+  -webkit-animation: moveUp .75s ease forwards;
+  -webkit-animation-delay: 1s;
+  opacity:0;
+}
+
+.topSectionNav{
+  height:100%;
+  width:20%;
+  float:left;
+  -webkit-animation: fadeIn .75s ease forwards;
+  animation: fadeIn .75s ease forwards;
+  -moz-animation: fadeIn .75s ease forwards;
+  -o-animation: fadeIn .75s ease forwards;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+  opacity:0;
+}
+.dropBoxLogo{
+  background: url(../assets/white_dropbox_glyph@2x.png) no-repeat center center;
+  width:72px;
+  height:68px;
+  position:relative;
+  margin:40% 30px 0;
+
+}
+
+.topSectionNav ul{
+  width:55px;
+  margin:30px;
+  color:#fff;
+  list-style:none;
+}
+
+.topSectionNav ul li{
+  line-height:2.5rem;
+  font-size:22px;
+}
+
+.topSectionNav ul li:nth-child(-n+2){
+  font-weight:700;
+}
+
+.topSectionInfo{
+  width:80%;
+  float:right;
+  height:100%;
+  color:#fff;
+  text-align:center;
+  animation: fadeIn .75s ease forwards;
+  -moz-animation: fadeIn .75s ease forwards;
+  -webkit-animation: fadeIn .75s ease forwards;
+  -o-animation: fadeIn .75s ease forwards;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+  opacity:0;
+}
+
+.topSectionInfo h1{
+  font-size:37px;
+  position:relative;
+  margin:15% auto 0 10%;
+  width:600px;
+}
+
+.topSectionInfo h2{
+  font-size:22px;
+  position:relative;
+  margin:1rem auto 0 10%;
+  line-height:2.5rem;
+  width:600px;
+}
+
+.topSectionInfo button{
+  background:#eee;
+  border-radius:5px;
+  border: 2px solid #0b56bc;
+  width:300px;
+  position:relative;
+  margin:1rem auto 0 20%;
+  padding:20px;
+  display:block;
+  font-size:22px;
+  color:#007ee5;
+}
+
+.topSectionInfo p{
+  width:600px;
+  position:relative;
+  font-size:15px;
+  color:#ccc;
+  margin:1rem auto 0 10%;
+  line-height:2rem;
+}
+
+.topSectionInfo p strong{
+  font-weight:600;
+  color:#fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 3px;
+}
+/*========================================Animations===============================================================*/
+@-webkit-keyframes moveUp {
+	0% { 
+    -webkit-transform: translateY(100%); 
+    -moz-transform: translateY(100%); 
+    -o-transform: translateY(100%); 
+    -ms-transform: translateY(100%); 
+    transform: translateY(100%); 
+    opacity: 0;
+  }
+	100% { 
+    -webkit-transform: translateY(0); 
+    -moz-transform: translateY(0); 
+    -o-transform: translateY(0); 
+    -ms-transform: translateY(0); 
+    transform: translateY(0); 
+    opacity: 1; 
+  
+  }
+}
+@keyframes moveUp {
+	0% { 
+    -webkit-transform: translateY(100%); 
+    -moz-transform: translateY(100%); 
+    -o-transform: translateY(100%); 
+    -ms-transform: translateY(100%); 
+    transform: translateY(100%); 
+    opacity: 0;
+  }
+	100% { 
+    -webkit-transform: translateY(0); 
+    -moz-transform: translateY(0); 
+    -o-transform: translateY(0); 
+    -ms-transform: translateY(0); 
+    transform: translateY(0); 
+    opacity: 1; 
+  
+  }
+}
+@-moz-keyframes moveUp {
+	0% { 
+    -webkit-transform: translateY(100%); 
+    -moz-transform: translateY(100%); 
+    -o-transform: translateY(100%); 
+    -ms-transform: translateY(100%); 
+    transform: translateY(100%); 
+    opacity: 0;
+  }
+	100% { 
+    -webkit-transform: translateY(0); 
+    -moz-transform: translateY(0); 
+    -o-transform: translateY(0); 
+    -ms-transform: translateY(0); 
+    transform: translateY(0); 
+    opacity: 1; 
+  
+  }
+}
+@-webkit-keyframes fadeIn {
+	0% { 
+    opacity: 0;
+  }
+	100% { 
+    opacity: 1; 
+  
+  }
+}
+@keyframes fadeIn {
+	0% { 
+    opacity: 0;
+  }
+	100% { 
+    opacity: 1; 
+  
+  }
+}
+@-moz-keyframes fadeIn {
+	0% { 
+    opacity: 0;
+  }
+	100% { 
+    opacity: 1; 
+  
+  }
+}
+
+/*============================================Animations End ===================================================*/
