@@ -14,7 +14,7 @@ html,body{
 
 .topSectionContainer{
   width:100%;
-  height:100%;
+  height:80%;
   background:#007ee5;
   position:relative;
 
@@ -26,23 +26,24 @@ html,body{
   background:url(../assets/dropbox-for-business-files.png) no-repeat center center;
   background-size:cover;
   position:absolute;
-  -webkit-animation: moveUp .75s ease forwards;
-  -webkit-animation-delay: 1s;
+  -webkit-animation: moveUp 1s ease forwards;
+  -webkit-animation-delay: .2s;
   opacity:0;
 }
 
 .topSectionNav{
   height:100%;
   width:20%;
-  float:left;
+  position:absolute;
+  z-index:1;
   -webkit-animation: fadeIn .75s ease forwards;
   animation: fadeIn .75s ease forwards;
   -moz-animation: fadeIn .75s ease forwards;
   -o-animation: fadeIn .75s ease forwards;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
   opacity:0;
 }
 .dropBoxLogo{
@@ -71,33 +72,33 @@ html,body{
 }
 
 .topSectionInfo{
-  width:80%;
-  float:right;
+  width:100%;
   height:100%;
+  position:absolute;
   color:#fff;
   text-align:center;
   animation: fadeIn .75s ease forwards;
   -moz-animation: fadeIn .75s ease forwards;
   -webkit-animation: fadeIn .75s ease forwards;
   -o-animation: fadeIn .75s ease forwards;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
   opacity:0;
 }
 
 .topSectionInfo h1{
   font-size:37px;
   position:relative;
-  margin:15% auto 0 10%;
+  margin:10% auto 0 auto;
   width:600px;
 }
 
 .topSectionInfo h2{
   font-size:22px;
   position:relative;
-  margin:1rem auto 0 10%;
+  margin:1rem auto 0 auto;
   line-height:2.5rem;
   width:600px;
 }
@@ -108,7 +109,7 @@ html,body{
   border: 2px solid #0b56bc;
   width:300px;
   position:relative;
-  margin:1rem auto 0 20%;
+  margin:1rem auto 0 auto;
   padding:20px;
   display:block;
   font-size:22px;
@@ -120,7 +121,8 @@ html,body{
   position:relative;
   font-size:15px;
   color:#ccc;
-  margin:1rem auto 0 10%;
+  margin:1rem auto 0 auto;
+  padding:0 30px;
   line-height:2rem;
 }
 
@@ -130,40 +132,246 @@ html,body{
   border-bottom: 1px solid #fff;
   padding-bottom: 3px;
 }
+
+/*=============================================Container style=====================================================*/
+.businessSectionContainer,.imageGalleryContainer{
+  width:100%;
+  position:relative;
+  padding:30px;
+  text-align:center;
+  color:#4C545A;
+  border-bottom:1px solid #8899a7;
+
+}
+.businessSectionContainer h1,.imageGalleryContainer h1{
+  font-size:22px;
+  line-height:2rem;
+  margin:1.5rem 55px;
+  padding: 0 30px;
+  opacity:0;
+  animation: fadeIn .75s ease forwards;
+  -moz-animation: fadeIn .75s ease forwards;
+  -webkit-animation: fadeIn .75s ease forwards;
+  -o-animation: fadeIn .75s ease forwards;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.businessSectionContainer p,.imageGalleryContainer p{
+  font-size:15px;
+  margin: 1rem 55px;
+  padding: 0 30px;
+}
+
+.businessSectionContainer button,.imageGalleryContainer button{
+  border:1px solid #007ee5;
+  border-radius:3px;
+  padding:10px;
+  position:relative;
+  width:150px;
+  clear:both;
+  margin:2rem auto;
+  text-align:center;
+  color: #007ee5;
+  background:#fff;
+  
+}
+
+/*====================================Business Section Styles======================================*/
+
+.businessSectionContainer figure{
+  width:33.33333%;
+  float:left;
+  display:inline-block;
+  opacity:0;
+}
+
+
+.businessAnimation{
+  -webkit-animation-name: slideFromLeft;
+  -moz-animation-name: slideFromLeft;
+  -o-animation-name: slideFromLeft;
+  animation-name: slideFromLeft;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.power{
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.security{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -o-animation-delay: .2s;
+  animation-delay: .2s;
+}
+.investment{
+  -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
+  -o-animation-delay: .4s;
+  animation-delay: .4s;
+}
+
+.businessSectionContainer figure div{
+  width:200px;
+  height:182px;
+  margin:auto;
+}
+.powerImage{
+   background:url(../assets/dropbox-for-business-why-devices.png) no-repeat center center;
+}
+
+.securityImage{
+  background:url(../assets/dropbox-for-business-why-watch.png) no-repeat center center;
+}
+
+.investImage{
+  background:url(../assets/dropbox-for-business-why-key.png) no-repeat center center;
+}
+
+/*===================================Image Gallery Section====================================================*/
+
+.imageGallery{
+  width:100%;
+  position:relative;
+  min-height:400px;
+}
+
+.imageGallery img{
+  width:540px;
+  height:300px;  
+}
+
+.imageGallery ul{
+  list-style:none;
+}
+
+.imageGallery .gallerySlides li{
+  position:absolute;
+  margin:auto;
+  left:0;
+  right:0;
+  opacity:0;
+}
+
+.imageAnimation{
+  animation: fadeIn .75s ease forwards;
+  -moz-animation: fadeIn .75s ease forwards;
+  -webkit-animation: fadeIn .75s ease forwards;
+  -o-animation: fadeIn .75s ease forwards;
+}
+
+
+
+.leftArrow{
+  width:16px;
+  height:30px;
+  position:absolute;
+  top:-150px;
+  bottom:0;
+  left:440px;
+  margin:auto;
+  z-index:1;
+  cursor:pointer;
+  background:url(../assets/arrow-left.png) no-repeat center center;
+}
+
+.rightArrow{
+  width:16px;
+  height:30px;
+  position:absolute;
+  top:-150px;
+  right:440px;
+  bottom:0;
+  margin:auto;
+  z-index:1;
+  cursor:pointer;
+  background:url(../assets/arrow-right.png) no-repeat center center;
+}
+
+
+.imageGallery .pagination{
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 5%;
+}
+
+.imageGallery .pagination li{
+  display:inline-block;
+  width:16px;
+  height:16px;
+  border-radius:100%;
+  background:#007ee5;
+  z-index:1;
+  margin: 0 15px;
+  cursor:pointer;
+}
+
+.imageGallery .pagination .activePage{
+  background:#8899a7;
+}
+
+.imageGalleryContainer p{
+  width:310px;
+  position:relative;
+  font-size:15px;
+  margin:1rem auto 0 auto;
+  padding:0 30px;
+  line-height:2rem;
+}
+
+
 /*========================================Animations===============================================================*/
 @-webkit-keyframes moveUp {
-	0% { 
-    -webkit-transform: translateY(100%); 
-    -moz-transform: translateY(100%); 
-    -o-transform: translateY(100%); 
-    -ms-transform: translateY(100%); 
-    transform: translateY(100%); 
-    opacity: 0;
-  }
-	100% { 
-    -webkit-transform: translateY(0); 
-    -moz-transform: translateY(0); 
-    -o-transform: translateY(0); 
-    -ms-transform: translateY(0); 
-    transform: translateY(0); 
+	0% {
+		-webkit-transform: translateY(100%);
+    opacity:0;
+	}
+	25%{
+    opacity: 0; 
+	}
+	50%{
+    opacity: 0; 
+	}
+	75%{
+    opacity: 0; 
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
     opacity: 1; 
-  
-  }
+	}	
 }
 @keyframes moveUp {
-	0% { 
-    -webkit-transform: translateY(100%); 
-    -moz-transform: translateY(100%); 
-    -o-transform: translateY(100%); 
-    -ms-transform: translateY(100%); 
+	0% {  
     transform: translateY(100%); 
     opacity: 0;
   }
+  25%{
+    opacity: 0; 
+	}
+	50%{
+    opacity: 0; 
+	}
+	75%{
+    opacity: 0; 
+	}		
 	100% { 
-    -webkit-transform: translateY(0); 
-    -moz-transform: translateY(0); 
-    -o-transform: translateY(0); 
-    -ms-transform: translateY(0); 
     transform: translateY(0); 
     opacity: 1; 
   
@@ -171,19 +379,20 @@ html,body{
 }
 @-moz-keyframes moveUp {
 	0% { 
-    -webkit-transform: translateY(100%); 
     -moz-transform: translateY(100%); 
-    -o-transform: translateY(100%); 
-    -ms-transform: translateY(100%); 
-    transform: translateY(100%); 
     opacity: 0;
   }
+  25%{
+    opacity: 0; 
+	}
+	50%{
+    opacity: 0; 
+	}
+	75%{
+    opacity: 0; 
+	}		
 	100% { 
-    -webkit-transform: translateY(0); 
     -moz-transform: translateY(0); 
-    -o-transform: translateY(0); 
-    -ms-transform: translateY(0); 
-    transform: translateY(0); 
     opacity: 1; 
   
   }
@@ -192,6 +401,7 @@ html,body{
 	0% { 
     opacity: 0;
   }
+  
 	100% { 
     opacity: 1; 
   
@@ -214,6 +424,23 @@ html,body{
     opacity: 1; 
   
   }
+}
+
+@-webkit-keyframes slideFromLeft {
+	0% {
+		-webkit-transform: translatex(-150%);
+    opacity:0;
+	}
+	65%{
+    transform: translateX(0%);
+	}
+	80%{
+    transform: translateX(-2%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+    opacity: 1; 
+	}	
 }
 
 /*============================================Animations End ===================================================*/
