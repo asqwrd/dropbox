@@ -142,6 +142,7 @@
     
     });
     
+    //video events for playing the video
     $('.playButton').on('click',function(){
       var video = $(this).parent().find('video');
       var header = $(this).parent().find('h1');
@@ -175,6 +176,8 @@
       $('.videoContainer').addClass('videoContainerBackground');
     });
     
+    //nav menu for mobile layout
+    
     $('.hamburger').on('click',function(){
       $('.topSectionNav').show();
       if($('.topSectionNav').hasClass('hideMenu'))
@@ -185,7 +188,6 @@
     });
     
     $('.close').on('click',function(){
-     // $('.topSectionNav').hide();
       $('.topSectionNav').addClass('hideMenu');
       $(this).hide();
       $('.hamburger').show();
