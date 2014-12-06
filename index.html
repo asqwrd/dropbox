@@ -4,6 +4,7 @@
     <meta http-equiv="X-FRAME-Options" content="deny">
     <meta name="viewport" content="width=device-width" />
     <title>Dropbox</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -12,7 +13,10 @@
     <main class="container">
       <section class="topSectionContainer">
         <section class="topSection">
+          <figure class="hamburger"></figure>
+          
           <nav class="topSectionNav">
+            <a class="close">Close</a>
             <figure class="dropBoxLogo"></figure>
             <ul>
               <li>Business</li>
@@ -75,6 +79,57 @@
         <p>From empowering mobile teams to making sure you never lose a file, Dropbox for Business is designed to help your team work smarter.</p>
         <button>Learn More</button>
       </section>
+      <section class="videoContainer videoContainerBackground">
+        <figure class="playButton"></figure>
+        <h1>Work together simply with<br> Dropbox for Business</h1>
+        <video class="video" width="100%" height="100%" controls>
+          <source src="assets/video_dfb_small.mov" type='video/mp4'>
+        Your browser does not support the video tag.
+        </video>
+      </section>
+      <section class="tryNow">
+        <h1>Get your team in sync</h1>
+        <button>Try it free</button>
+        <p>or buy for $15 / user / month</p>
+      </section>
+      <footer class="footerContainer">
+        <ul>
+          <li>Business</li>
+          <li>Home</li>
+          <li>Desktop Client</li>
+          <li>Mobile</li>
+          <li>Pricing</li>
+        </ul>
+        <ul>
+          <li>Resources</li>
+          <li>Blog</li>
+          <li>Help</li>
+          <li>Partners</li>
+          <li>Documentation</li>
+          <li>Purchasing FAQ</li>
+          <li>Buy</li>
+        </ul>
+        <ul>
+          <li>Support</li>
+          <li>Help</li>
+          <li>Get Started</li>
+          <li>Contact us</li>
+        </ul>
+        <ul>
+          <li>Community</li>
+          <li>Twitter</li>
+          <li>Referrals</li>
+          <li>Integration</li>
+        </ul>
+        <ul>
+          <li>Connect</li>
+          <li>Twitter</li>
+          <li>Facebook</li>
+          <li>Google+</li>
+          <li>Youtube</li>
+          <li>Blogs</li>
+        </ul>
+      </footer>
     </main>
 	</body>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -86,6 +141,57 @@
       }
     
     });
+    
+    $('.playButton').on('click',function(){
+      var video = $(this).parent().find('video');
+      var header = $(this).parent().find('h1');
+      $(this).fadeOut();
+      header.hide();
+      $(this).parent().removeClass('videoContainerBackground');
+      video.fadeIn();
+      video[0].play();
+    });
+    
+    $('.video').on('pause',function(){
+      $(this).fadeOut();
+      $('.playButton').fadeIn();
+      var header = $(this).parent().find('h1');
+      header.show();
+      $('.videoContainer').addClass('videoContainerBackground');
+    });
+    
+     $('.video').on('seeking',function(){
+      $(this).fadeIn();
+      $('.playButton').hide();
+      header.hide();
+      $('.videoContainer').removeClass('videoContainerBackground');
+    });
+    
+    $('.video').on('onended',function(){
+      $(this).fadeOut();
+      $('.playButton').fadeIn();
+      var header = $(this).parent().find('h1');
+      header.show();
+      $('.videoContainer').addClass('videoContainerBackground');
+    });
+    
+    $('.hamburger').on('click',function(){
+      $('.topSectionNav').show();
+      if($('.topSectionNav').hasClass('hideMenu'))
+        $('.topSectionNav').removeClass('hideMenu');
+      $(this).hide();
+      $('.close').show();
+      
+    });
+    
+    $('.close').on('click',function(){
+     // $('.topSectionNav').hide();
+      $('.topSectionNav').addClass('hideMenu');
+      $(this).hide();
+      $('.hamburger').show();
+    });
+    
+    
     
     //create Image Gallery
     $('.imageGallery').imageGallery({

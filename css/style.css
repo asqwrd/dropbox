@@ -51,13 +51,14 @@ html,body{
   width:72px;
   height:68px;
   position:relative;
-  margin:40% 30px 0;
+  margin: 55px 30px;
+  padding:0 55px;
 
 }
 
 .topSectionNav ul{
-  width:55px;
-  margin:30px;
+  padding:0 55px;
+  margin:0 30px;
   color:#fff;
   list-style:none;
 }
@@ -103,8 +104,8 @@ html,body{
   width:600px;
 }
 
-.topSectionInfo button{
-  background:#eee;
+.topSectionInfo button,.tryNow button{
+  background:#fff;
   border-radius:5px;
   border: 2px solid #0b56bc;
   width:300px;
@@ -114,9 +115,10 @@ html,body{
   display:block;
   font-size:22px;
   color:#007ee5;
+  cursor:pointer;
 }
 
-.topSectionInfo p{
+.topSectionInfo p,.tryNow p{
   width:600px;
   position:relative;
   font-size:15px;
@@ -133,22 +135,22 @@ html,body{
   padding-bottom: 3px;
 }
 
-/*=============================================Container style=====================================================*/
-.businessSectionContainer,.imageGalleryContainer{
+/*=============================================Container styles=====================================================*/
+.businessSectionContainer,.imageGalleryContainer,.videoContainer,.tryNow,.footerContainer{
   width:100%;
   position:relative;
-  padding:30px;
   text-align:center;
-  color:#4C545A;
+  color:#8899a7;
   border-bottom:1px solid #8899a7;
-
+  padding-bottom:55px;
 }
-.businessSectionContainer h1,.imageGalleryContainer h1{
+.businessSectionContainer h1,.imageGalleryContainer h1,.videoContainer h1,.tryNow h1{
   font-size:22px;
   line-height:2rem;
-  margin:1.5rem 55px;
+  margin:4rem 55px;
   padding: 0 30px;
   opacity:0;
+  display:inline-block;
   animation: fadeIn .75s ease forwards;
   -moz-animation: fadeIn .75s ease forwards;
   -webkit-animation: fadeIn .75s ease forwards;
@@ -161,8 +163,9 @@ html,body{
 
 .businessSectionContainer p,.imageGalleryContainer p{
   font-size:15px;
-  margin: 1rem 55px;
+  margin: -3rem 55px 1rem;
   padding: 0 30px;
+  line-height:1.5rem;
 }
 
 .businessSectionContainer button,.imageGalleryContainer button{
@@ -176,6 +179,7 @@ html,body{
   text-align:center;
   color: #007ee5;
   background:#fff;
+  cursor:pointer;
   
 }
 
@@ -245,7 +249,9 @@ html,body{
 }
 
 /*===================================Image Gallery Section====================================================*/
-
+.imageGalleryContainer{
+  border:0;
+}
 .imageGallery{
   width:100%;
   position:relative;
@@ -284,11 +290,12 @@ html,body{
   position:absolute;
   top:-150px;
   bottom:0;
-  left:440px;
+  left:15%;
   margin:auto;
   z-index:1;
   cursor:pointer;
   background:url(../assets/arrow-left.png) no-repeat center center;
+  
 }
 
 .rightArrow{
@@ -296,12 +303,13 @@ html,body{
   height:30px;
   position:absolute;
   top:-150px;
-  right:440px;
+  right:15%;
   bottom:0;
   margin:auto;
   z-index:1;
   cursor:pointer;
   background:url(../assets/arrow-right.png) no-repeat center center;
+  background-size:contain;
 }
 
 
@@ -335,6 +343,74 @@ html,body{
   padding:0 30px;
   line-height:2rem;
 }
+
+/*==================================================video Section============================*/
+.videoContainer{
+  height:500px;
+  padding:0;
+  background:#000;
+  border:0;
+}
+
+.videoContainerBackground{
+  background:url(../assets/video-still.jpg) no-repeat center center;
+  background-size:cover;
+}
+
+.videoContainer video{
+  width:100%;
+  height:100%;
+  display:none;
+}
+
+.videoContainer .playButton{
+  position:absolute;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:1;
+  background:url(../assets/player_large.png) no-repeat center center;
+  width:106px;
+  height:106px;
+  cursor:pointer;
+}
+
+/*======================================Try Now Section==================================================*/
+.tryNow p{
+  color:#8899a7;
+}
+
+.tryNow button{
+  border:0;
+  color:#fff;
+  background:#007ee5;
+  margin-top:-2.5rem;
+}
+
+/*====================================Footer Section =============================================================*/
+
+.footerContainer{
+  border:0;
+}
+.footerContainer ul{
+  float:left;
+  margin: 0 25px;
+  padding: 27.5;
+  color:#4c545a;
+  font-size:13px;
+  text-align:left;
+}
+
+.footerContainer li{
+  line-height:1.5rem;
+}
+
+.footerContainer ul li:first-child{
+  font-weight:700;
+}
+
 
 
 /*========================================Animations===============================================================*/
@@ -443,4 +519,275 @@ html,body{
 	}	
 }
 
-/*============================================Animations End ===================================================*/
+@-webkit-keyframes showMenu {
+	0% {
+		-webkit-transform: translatex(-150%);
+    opacity:0;
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+    opacity:1;
+	}
+}  
+@-webkit-keyframes hideMenu {
+	0% {
+		-webkit-transform: translatex(0%);
+    opacity:1;
+	}
+	100% {
+		-webkit-transform: translateX(-150%);
+    opacity:0;
+	}
+}
+
+
+/*=========================================Mobile Nav item Styles====================================================*/
+
+.hamburger {
+    position:absolute;
+    display:inline-block;
+    top:.5em;
+    width:30px;
+    height:12px;
+    border-top:4px solid #fff;
+    border-bottom:4px solid #fff;
+    z-index:100;
+    display:none;
+}
+ 
+.hamburger:before {
+    content:"";
+    position:absolute; 
+    top:4px;
+    left:0;
+    width:100%;
+    border-top:4px solid #fff;
+}
+
+.close{
+  color:#fff;
+  cursor:pointer;
+  display:none;
+  position:absolute;
+  right:10px;
+  top:10px;
+  font-size:22px;
+}
+
+.close:before {
+  content: ' X ';
+  color: #fff;
+  font-weight: 300;
+  font-size:22px;
+}
+
+.hideMenu{
+  animation: hideMenu .75s ease forwards !important;
+  -moz-animation: hideMenu .75s ease forwards !important;
+  -webkit-animation: hideMenu .75s ease forwards !important;
+  -o-animation: hideMenu .75s ease forwards !important;
+
+}
+
+/*=========================================Responsive Styles====================================================*/
+
+@media only screen and (max-width: 1000px) {
+  .hamburger {
+    display:block;
+  }
+  .topSectionContainer{
+    height:100%;
+  }
+  .topSectionNav{
+    display:none;
+    background:#ccc;
+    width:60%;
+    animation: showMenu .75s ease forwards;
+    -moz-animation: showMenu .75s ease forwards;
+    -webkit-animation: showMenu .75s ease forwards;
+    -o-animation: showMenu .75s ease forwards;
+  }
+  .dropBoxLogo{
+    width:36px;
+    height:34px;
+    background-size:contain;
+    margin: 2em 1rem;
+    padding:0;
+
+  }
+
+  .topSectionNav ul{
+    padding:0;
+    margin:1rem;
+    color:#fff;
+    list-style:none;
+  }
+
+  .topSectionNav ul li{
+    line-height:1.5rem;
+    font-size:15px;
+  }
+
+  .topSectionNav ul li:nth-child(-n+2){
+    font-weight:700;
+  }
+  .topSectionInfo{
+    height: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+  }
+  .topSectionInfo h1{
+    font-size:22px;
+    width:auto;
+  }
+
+  .topSectionInfo h2{
+    font-size:15px;
+    line-height:1.5rem;
+    padding:10px;
+    width:auto;
+  }
+
+  .topSectionInfo button,.tryNow button{
+    background:#fff;
+    width:200px;
+    padding:10px;
+    font-size:15px;
+  }
+
+  .topSectionInfo p,.tryNow p{
+    width:auto;
+    font-size:1rem;
+    line-height:1rem;
+  }
+  
+  .businessSectionContainer h1,.imageGalleryContainer h1,.videoContainer h1,.tryNow h1{
+    margin:2rem auto 1rem;
+    padding: 10px;
+  }
+
+  .businessSectionContainer p,.imageGalleryContainer p{
+    margin:auto;
+    padding: 10px;
+  }
+
+  .businessSectionContainer button,.imageGalleryContainer button{
+    padding:10px;
+    width:100px;
+    margin:2rem auto; 
+  }
+
+  
+  .businessSectionContainer figure{
+    width:100%;
+    float:none;
+  }
+  
+  .powerImage{
+   background:url(../assets/dropbox-for-business-why-devices@2x.png) no-repeat center center;
+   background-size:contain;
+  }
+
+  .securityImage{
+    background:url(../assets/dropbox-for-business-why-watch@2x.png) no-repeat center center;
+    background-size:contain;
+  }
+
+  .investImage{
+    background:url(../assets/dropbox-for-business-why-key@2x.png) no-repeat center center;
+    background-size:contain;
+  }
+  
+  .imageGallery{
+    min-height:200px;
+  }
+
+  .imageGallery img{
+    width:270px;
+    height:150px;  
+  }
+  
+  .leftArrow{
+    width:16px;
+    height:30px;
+    top:-70px;
+    bottom:0;
+    left:5px;
+    background:url(../assets/arrow-left@2x.png) no-repeat center center;
+    background-size:contain;
+  }
+
+  .rightArrow{
+    width:16px;
+    height:30px;
+    top:-75px;
+    right:5px;
+    bottom:0;
+    background:url(../assets/arrow-right@2x.png) no-repeat center center;
+    background-size:contain;
+  }
+
+
+  .imageGallery .pagination{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 5%;
+  }
+
+  .imageGallery .pagination li{
+    display:inline-block;
+    width:16px;
+    height:16px;
+    border-radius:100%;
+    background:#007ee5;
+    z-index:1;
+    margin: 0 15px;
+    cursor:pointer;
+  }
+  
+  .videoContainer{
+    height:500px;
+    padding:0;
+    background:#000;
+    border:0;
+  }
+
+  .videoContainerBackground{
+    background:url(../assets/video-still@2x.jpg) no-repeat center center;
+    background-size:cover;
+  }
+
+  .videoContainer video{
+    width:100%;
+    height:100%;
+    display:none;
+  }
+  
+  .tryNow button{
+    margin-top:-1.25rem;
+    background: #007ee5;
+  }
+  
+  .footerContainer ul{
+    margin:10px;
+    padding:0;
+  }
+  
+  
+
+
+
+}
+
+@media only screen and (max-width: 1000px) and (orientation:landscape) {
+  .topSectionInfo{
+    height: 100%;
+  }
+}
+
+
+
+
