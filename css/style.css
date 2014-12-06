@@ -357,9 +357,6 @@ html,body{
   padding:0;
   background:#000;
   border:0;
-}
-
-.videoContainerBackground{
   background:url(../assets/video-still.jpg) no-repeat center center;
   background-size:cover;
 }
@@ -368,6 +365,10 @@ html,body{
   width:100%;
   height:100%;
   display:none;
+  position:absolute;
+  top:0;
+  left:0;
+  background:#000;
 }
 
 .videoContainer .playButton{

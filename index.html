@@ -148,7 +148,6 @@
       var header = $(this).parent().find('h1');
       $(this).fadeOut();
       header.hide();
-      $(this).parent().removeClass('videoContainerBackground');
       video.fadeIn();
       video[0].play();
     });
@@ -158,14 +157,12 @@
       $('.playButton').fadeIn();
       var header = $(this).parent().find('h1');
       header.show();
-      $('.videoContainer').addClass('videoContainerBackground');
     });
     
      $('.video').on('seeking',function(){
       $(this).fadeIn();
       $('.playButton').hide();
       header.hide();
-      $('.videoContainer').removeClass('videoContainerBackground');
     });
     
     $('.video').on('onended',function(){
@@ -173,7 +170,6 @@
       $('.playButton').fadeIn();
       var header = $(this).parent().find('h1');
       header.show();
-      $('.videoContainer').addClass('videoContainerBackground');
     });
     
     //nav menu for mobile layout
